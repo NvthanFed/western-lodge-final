@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { FadeInUp } from "@/components/ui/FadeInUp";
 import { fadeInLeft, fadeInRight } from "@/lib/animations";
 
 export function AboutSection() {
@@ -12,7 +11,7 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto section-x">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Left — image */}
+          {/* Left — photo with overlapping Est. badge */}
           <motion.div
             variants={fadeInLeft}
             initial="hidden"
@@ -23,26 +22,26 @@ export function AboutSection() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-luxury">
               <Image
                 src="/western-lodge.png"
-                alt="Western Highway Lodge — Marabut, Samar"
+                alt="Western Highway Lodge at night — Marabut, Samar"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-linear-to-b from-transparent to-teal-900/30" />
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-teal-900/25" />
             </div>
 
-            {/* Decorative circle */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full border-2 border-sand-300/80 -z-10" />
-
-            {/* Floating Est. card */}
-            <div className="absolute -bottom-5 -right-5 bg-teal-500 rounded-2xl px-5 py-4 shadow-luxury">
-              <p className="font-body font-600 text-[0.65rem] tracking-[0.2em] uppercase text-teal-100/80 mb-1">Est.</p>
-              <p className="font-heading font-800 text-white text-3xl leading-none">2018</p>
-              <p className="font-body text-[0.65rem] tracking-[0.15em] uppercase text-teal-100/80 mt-1">Marabut, Samar</p>
+            {/* Teal Est. badge — overlaps bottom-right corner */}
+            <div className="absolute -bottom-5 -right-5 bg-teal-500 rounded-2xl px-6 py-5 shadow-luxury">
+              <p className="font-body font-600 text-[0.6rem] tracking-[0.22em] uppercase text-teal-100/75 mb-1">Est.</p>
+              <p className="font-heading font-800 text-white text-4xl leading-none">2018</p>
+              <p className="font-body text-[0.6rem] tracking-[0.2em] uppercase text-teal-100/75 mt-1.5">Marabut, Samar</p>
             </div>
+
+            {/* Decorative accent circle */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full border-2 border-sand-300/70 -z-10" />
           </motion.div>
 
-          {/* Right — text */}
+          {/* Right — text column */}
           <motion.div
             variants={fadeInRight}
             initial="hidden"
@@ -55,6 +54,7 @@ export function AboutSection() {
               title="A Coastal Sanctuary in the Heart of Samar"
               className="mb-8"
             />
+
             <div className="space-y-5 font-body text-fluid-base text-muted leading-relaxed">
               <p>
                 Nestled along the pristine shores of Marabut Bay, Western Highway Lodge was founded with a single vision: to offer guests an authentic Philippine coastal experience without sacrificing comfort or elegance. Every detail — from the locally sourced timber accents to the handcrafted rattan furniture — reflects the natural beauty of our surroundings.
@@ -64,11 +64,11 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Stats */}
+            {/* Stats row */}
             <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-sand-300">
               {[
-                { value: "7+", label: "Years of Service" },
-                { value: "12", label: "Room Types" },
+                { value: "7+",   label: "Years of Service" },
+                { value: "12",   label: "Room Types" },
                 { value: "4.9★", label: "Guest Rating" },
               ].map(({ value, label }) => (
                 <div key={label}>
@@ -78,6 +78,7 @@ export function AboutSection() {
               ))}
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

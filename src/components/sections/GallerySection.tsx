@@ -11,7 +11,7 @@ interface GallerySectionProps {
 
 export function GallerySection({ items }: GallerySectionProps) {
   return (
-    <section id="gallery" className="bg-sand-200 section-y">
+    <section id="gallery" className="bg-ivory section-y">
       <div className="max-w-7xl mx-auto section-x">
         <FadeInUp className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 lg:mb-16">
           <SectionHeading

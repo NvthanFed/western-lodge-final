@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import Link from "next/link";
 import { NAV_LINKS } from "@/data/content";
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -19,106 +19,90 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
-const ROOM_LINKS = [
-  "Delux Single Room",
-  "Super Delux Studio",
-  "Superior Delux Twin Room",
-  "Superior Delux Suite",
-];
-
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-teal-900 text-white">
+    <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto section-x py-16 md:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-16">
 
-          {/* Col 1 — Brand */}
-          <div className="lg:col-span-1">
-            <div className="mb-4">
-              <p className="font-heading font-800 text-base tracking-[0.08em]">WESTERN HIGHWAY</p>
-              <p className="font-body font-500 text-[0.65rem] tracking-[0.38em] uppercase text-teal-300 mt-0.5">Lodge</p>
-            </div>
-            <p className="font-body text-sm text-white/50 leading-relaxed mb-6">
+          {/* Left — Logo lockup */}
+          <div>
+            <Link href="/" className="flex flex-col leading-none mb-4 group">
+              <span className="font-heading font-800 text-base md:text-lg tracking-[0.08em] text-white group-hover:text-cream-300 transition-colors duration-300">
+                WESTERN HIGHWAY
+              </span>
+              <span className="font-body font-500 text-[0.6rem] tracking-[0.42em] uppercase text-cream-300/60 mt-0.5">
+                LODGE
+              </span>
+            </Link>
+            <p className="font-body text-sm text-white/45 leading-relaxed max-w-[200px]">
               A sanctuary of tropical luxury on the shores of Marabut, Samar Province.
             </p>
-            <div className="flex items-center gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                className="w-9 h-9 bg-white/8 hover:bg-white/18 rounded-lg flex items-center justify-center transition-colors">
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-                className="w-9 h-9 bg-white/8 hover:bg-white/18 rounded-lg flex items-center justify-center transition-colors">
-                <InstagramIcon className="w-4 h-4" />
-              </a>
-            </div>
           </div>
 
-          {/* Col 2 — Explore */}
+          {/* Center — Quick links */}
           <div>
-            <h4 className="font-body font-600 text-[0.65rem] tracking-[0.28em] uppercase text-teal-400 mb-5">Explore</h4>
+            <h4 className="font-body font-600 text-[0.65rem] tracking-[0.28em] uppercase text-teal-400 mb-5">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="font-body text-sm text-white/55 hover:text-white transition-colors">{link.label}</a>
+                  <a
+                    href={link.href}
+                    className="font-body text-sm text-white/50 hover:text-white transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3 — Accommodations */}
+          {/* Right — Social */}
           <div>
-            <h4 className="font-body font-600 text-[0.65rem] tracking-[0.28em] uppercase text-teal-400 mb-5">Accommodations</h4>
-            <ul className="space-y-3">
-              {ROOM_LINKS.map((name) => (
-                <li key={name}>
-                  <a href="#rooms" className="font-body text-sm text-white/55 hover:text-white transition-colors">{name}</a>
-                </li>
-              ))}
-            </ul>
+            <h4 className="font-body font-600 text-[0.65rem] tracking-[0.28em] uppercase text-teal-400 mb-5">
+              Follow Us
+            </h4>
+            <div className="flex items-center gap-3 mb-6">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-9 h-9 bg-white/8 hover:bg-teal-500 rounded-lg flex items-center justify-center transition-colors duration-300"
+              >
+                <FacebookIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-9 h-9 bg-white/8 hover:bg-teal-500 rounded-lg flex items-center justify-center transition-colors duration-300"
+              >
+                <InstagramIcon className="w-4 h-4" />
+              </a>
+            </div>
+            <p className="font-body text-xs text-white/30 leading-relaxed">
+              Marabut, Samar Province<br />Philippines
+            </p>
           </div>
 
-          {/* Col 4 — Contact */}
-          <div>
-            <h4 className="font-body font-600 text-[0.65rem] tracking-[0.28em] uppercase text-teal-400 mb-5">Contact</h4>
-            <ul className="space-y-4">
-              <li className="flex gap-3">
-                <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" strokeWidth={1.5} />
-                <span className="font-body text-sm text-white/55 leading-relaxed">
-                  Marabut, Samar Province<br />Philippines
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-teal-400 shrink-0" strokeWidth={1.5} />
-                <a href="tel:+639391504286" className="font-body text-sm text-white/55 hover:text-white transition-colors">
-                  +63 (939)-150-4286
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-teal-400 shrink-0" strokeWidth={1.5} />
-                <a href="mailto:westernhighwaylodgehotel@hotmail.com" className="font-body text-sm text-white/55 hover:text-white transition-colors break-all">
-                  westernhighwaylodgehotel@hotmail.com
-                </a>
-              </li>
-              <li className="flex gap-3">
-                <Clock className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" strokeWidth={1.5} />
-                <span className="font-body text-sm text-white/55 leading-relaxed">
-                  Front desk: 24 hours<br />
-                  Check-in: 2:00 PM<br />
-                  Check-out: 12:00 PM
-                </span>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
+      {/* Copyright row */}
       <div className="border-t border-white/8">
         <div className="max-w-7xl mx-auto section-x py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="font-body text-xs text-white/30">© {year} Western Highway Lodge. All rights reserved.</p>
-          <p className="font-body text-xs text-white/30">Marabut, Samar Province, Philippines</p>
+          <p className="font-body text-xs text-white/30">
+            &copy; {year} Western Highway Lodge. All rights reserved.
+          </p>
+          <p className="font-body text-xs text-white/20">
+            Basey-Marabut-Pinamitinan Rd, Marabut 6721, Samar, Philippines
+          </p>
         </div>
       </div>
     </footer>

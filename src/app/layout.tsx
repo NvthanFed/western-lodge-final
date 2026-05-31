@@ -21,7 +21,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Western Highway Lodge — Luxury Coastal Retreat | Marabut, Samar",
   description:
-    "Experience the serene beauty of Marabut's coastal paradise at Western Highway Lodge. Tropical luxury, oceanfront rooms, rooftop bar, and world-class hospitality in Samar Province, Philippines.",
+    "Experience the serene beauty of Marabut's coastal paradise at Western Highway Lodge. Tropical luxury, oceanfront rooms, and world-class hospitality in Samar Province, Philippines.",
   keywords: [
     "Western Highway Lodge",
     "Marabut Samar hotel",

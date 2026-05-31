@@ -1,11 +1,11 @@
 import type { Room, GalleryItem, Testimonial, NavLink } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "About",      href: "#about" },
-  { label: "Rooms",      href: "#rooms" },
-  { label: "Amenities",  href: "#amenities" },
-  { label: "Gallery",    href: "#gallery" },
-  { label: "Contact",    href: "#contact" },
+  { label: "About",     href: "#about" },
+  { label: "Rooms",     href: "#rooms" },
+  { label: "Amenities", href: "#amenities" },
+  { label: "Gallery",   href: "#gallery" },
+  { label: "Contact",   href: "#contact" },
 ];
 
 export const ROOM_TYPE_LABELS: Record<string, string> = {

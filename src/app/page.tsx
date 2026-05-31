@@ -7,10 +7,8 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { RoomsSection } from "@/components/sections/RoomsSection";
 import { AmenitiesSection } from "@/components/sections/AmenitiesSection";
 import { GallerySection } from "@/components/sections/GallerySection";
-import { AttractionsSection } from "@/components/sections/AttractionsSection";
-import { BookingCtaSection } from "@/components/sections/BookingCtaSection";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { ROOMS, GALLERY } from "@/data/content";
+import { GALLERY } from "@/data/content";
 
 export default function HomePage() {
   return (
@@ -19,11 +17,9 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
-        <RoomsSection rooms={ROOMS} />
+        <RoomsSection />
         <AmenitiesSection />
         <GallerySection items={GALLERY} />
-        <AttractionsSection />
-        <BookingCtaSection />
         <ContactSection />
       </main>
       <Footer />
