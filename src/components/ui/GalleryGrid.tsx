@@ -13,12 +13,12 @@ interface GalleryGridProps {
 }
 
 const BENTO_CLASSES = [
-  "col-span-2 row-span-2 aspect-[4/3]",
-  "col-span-1 row-span-1 aspect-[4/3]",
-  "col-span-1 row-span-1 aspect-[4/3]",
-  "col-span-1 row-span-2 aspect-[3/4]",
-  "col-span-1 row-span-1 aspect-[4/3]",
-  "col-span-1 row-span-1 aspect-[4/3]",
+  "col-span-2 row-span-2",
+  "col-span-1 row-span-1",
+  "col-span-1 row-span-1",
+  "col-span-1 row-span-1",
+  "col-span-1 row-span-1",
+  "col-span-1 row-span-1",
 ];
 
 export function GalleryGrid({ items }: GalleryGridProps) {

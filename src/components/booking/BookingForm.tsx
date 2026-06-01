@@ -24,8 +24,17 @@ export function BookingForm({ onSuccess }: BookingFormProps) {
     setSubmitting(true);
     setApiError(null);
     try {
-      console.log("📋 Booking inquiry:", data);
-      await new Promise((r) => setTimeout(r, 600));
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        setApiError(json.error ?? "Something went wrong. Please try again.");
+        setSubmitting(false);
+        return;
+      }
       onSuccess();
     } catch {
       setApiError("Something went wrong. Please try again.");

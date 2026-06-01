@@ -45,8 +45,15 @@ export function ContactSection() {
   const onSubmit = async (data: ContactInput) => {
     setStatus("submitting");
     try {
-      console.log("📋 Contact submission:", data);
-      await new Promise((r) => setTimeout(r, 600));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        setStatus("error");
+        return;
+      }
       setStatus("success");
       reset();
     } catch {

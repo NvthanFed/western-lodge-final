@@ -20,25 +20,25 @@ export const ROOM_TYPE_LABELS: Record<string, string> = {
 
 export const ROOMS: Room[] = [
   {
-    id: "single-room",
+    id: "delux-single",
     name: "Delux Single Room",
     type: "SINGLE",
     description:
-      "Comfortable solo sanctuary with a full-size bed, en-suite bathroom, and all the essentials. Perfect for travelers seeking simplicity and comfort without the extra space.",
+      "Full-size single bed with en-suite shower, air conditioning, ceiling fan, fridge, satellite TV, kettle, mineral water, and complimentary toiletries. Ground floor (GF6 & GF7). Second person sharing +₱250/night.",
     price: "950",
-    capacity: 1,
-    amenities: ["Air Conditioning", "Ceiling Fan", "Satellite TV", "En-Suite Bathroom", "Mineral Water", "Complimentary Toiletries"],
-    images: ["/western-lodge.png"],
+    capacity: 2,
+    amenities: ["Air Conditioning", "Ceiling Fan", "Fridge", "Satellite TV", "En-Suite Shower", "Kettle", "Mineral Water", "Complimentary Toiletries"],
+    images: ["/room1.jpeg"],
   },
   {
     id: "double-bunk",
     name: "Double Bunks Single Room",
     type: "DOUBLE_BUNK",
     description:
-      "Budget-friendly bunk room ideal for backpackers and group travelers. Features single-size bunk beds with AC, shared facilities, and communal comfort at an unbeatable price.",
+      "Single-size bunk beds (up and down) with shared bathroom. Air conditioning, ceiling fan, kettle, mineral water, and complimentary toiletries. Ground floor annex (GR11 & GR12). Single occupant ₱500/night.",
     price: "900",
     capacity: 2,
-    amenities: ["Air Conditioning", "Ceiling Fan", "Bunk Beds", "Shared Bathroom", "Mineral Water", "Complimentary Toiletries"],
+    amenities: ["Air Conditioning", "Ceiling Fan", "Bunk Beds", "Shared Bathroom", "Kettle", "Mineral Water", "Complimentary Toiletries"],
     images: ["/western-lodge.png"],
   },
   {
@@ -46,32 +46,32 @@ export const ROOMS: Room[] = [
     name: "Super Delux Studio",
     type: "STUDIO",
     description:
-      "Spacious studio with queen and single bed combination, mini fridge, and hot/cold shower. The perfect balance of space and value for small groups or couples seeking more room.",
+      "Queen size bed plus full-size single bed with en-suite hot/cold shower. Air conditioning, ceiling fan, fridge, satellite TV, kettle, and mineral water. Sleeps up to 3. 1–2 Pax ₱1,500 · 3 Pax ₱1,950. Extra person +₱600/night.",
     price: "1500",
     capacity: 3,
-    amenities: ["Air Conditioning", "Ceiling Fan", "Queen & Single Bed", "Mini Fridge", "Satellite TV", "En-Suite Bathroom"],
-    images: ["/western-lodge.png"],
+    amenities: ["Air Conditioning", "Ceiling Fan", "Queen & Single Bed", "Fridge", "Satellite TV", "En-Suite Hot/Cold Shower", "Kettle", "Mineral Water", "Complimentary Toiletries"],
+    images: ["/room4.png"],
   },
   {
     id: "studio-balcony",
     name: "Super Delux Studio with Balcony",
     type: "STUDIO_BALCONY",
     description:
-      "Charming studio with private balcony, queen bed, and sofa lounge. Ideal for couples who want to wake up to coastal breezes and enjoy morning views from their own outdoor space.",
+      "Queen size bed with sofa set and private balcony. En-suite hot/cold shower, air conditioning, ceiling fan, fridge, satellite TV, and kettle. Sleeps 2. 1–2 Pax ₱1,400. Extra person +₱600/night.",
     price: "1400",
     capacity: 2,
-    amenities: ["Air Conditioning", "Ceiling Fan", "Private Balcony", "Queen Bed & Sofa", "Mini Fridge", "En-Suite Bathroom"],
-    images: ["/western-lodge.png"],
+    amenities: ["Air Conditioning", "Ceiling Fan", "Private Balcony", "Queen Bed & Sofa", "Fridge", "Satellite TV", "En-Suite Hot/Cold Shower", "Kettle", "Mineral Water", "Complimentary Toiletries"],
+    images: ["/room2.png"],
   },
   {
     id: "twin-room",
     name: "Superior Delux Twin Room",
     type: "TWIN",
     description:
-      "Classic twin room with two full-size beds, perfect for friends or colleagues traveling together. Features modern amenities and a comfortable en-suite bathroom with hot water.",
+      "Two full-size single beds with en-suite hot/cold shower. Air conditioning, ceiling fan, fridge, satellite TV, kettle, and mineral water. Ground floor annex (R14). Sleeps 2. 2 Pax ₱1,500. Extra person +₱600/night.",
     price: "1500",
     capacity: 2,
-    amenities: ["Air Conditioning", "Ceiling Fan", "Twin Beds", "Mini Fridge", "Satellite TV", "En-Suite Bathroom"],
+    amenities: ["Air Conditioning", "Ceiling Fan", "Twin Beds", "Fridge", "Satellite TV", "En-Suite Hot/Cold Shower", "Kettle", "Mineral Water", "Complimentary Toiletries"],
     images: ["/western-lodge.png"],
   },
   {
@@ -79,22 +79,22 @@ export const ROOMS: Room[] = [
     name: "Superior Delux Family Studio",
     type: "FAMILY_STUDIO",
     description:
-      "Spacious two-room suite with separate bedroom and lounge area. Sleeps up to 5 with multiple bed configurations. Pricing: ₱2,000 (3 Pax) · ₱2,600 (4 Pax) · ₱3,250 (5 Pax). Perfect for families wanting shared living space.",
+      "Double bed and full-size single bed with adjoining bunk room (2 full-size bunk beds). En-suite hot/cold shower, AC, ceiling fan, satellite TV, fridge, vanity unit, and storage cabinets. Sleeps 5. 3 Pax ₱2,000 · 4 Pax ₱2,600 · 5 Pax ₱3,250. Extra person +₱600/night.",
     price: "2000",
     capacity: 5,
-    amenities: ["Air Conditioning", "Separate Bedroom & Lounge", "Multiple Beds", "Mini Fridge", "Satellite TV", "En-Suite Bathroom"],
-    images: ["/western-lodge.png"],
+    amenities: ["Air Conditioning", "Ceiling Fan", "Double + Single + Bunk Beds", "Fridge", "Satellite TV", "En-Suite Hot/Cold Shower", "Vanity Unit", "Storage Cabinets", "Kettle", "Mineral Water", "Complimentary Toiletries"],
+    images: ["/room3.png"],
   },
   {
     id: "superior-suite",
-    name: "Superior Delux Suite – Family Apartment",
+    name: "Superior Delux Suite",
     type: "SUITE",
     description:
-      "Premier three-bedroom apartment sleeps up to 8 guests. Complete with multiple bathrooms, dining area, kitchen access. Pricing: ₱3,250 (5 Pax) · ₱3,900 (6 Pax) · ₱5,200 (8 Pax). Ideal for extended family stays and group retreats.",
+      "Three-bedroom family apartment sleeping up to 8. Bedroom 1: queen bed, single bed, and baby crib. Bedroom 2: twin bunk beds. Bedroom 3: three full-size singles with spacious en-suite. Dining table, fridge, mineral water dispenser, multiple ACs, and satellite TV. 5 Pax ₱3,250 · 6 Pax ₱3,900 · 8 Pax ₱5,200. Extra person +₱500/night.",
     price: "3250",
     capacity: 8,
-    amenities: ["3 Bedrooms", "Multiple Bathrooms", "Kitchen Access", "Dining Area", "Satellite TV", "Air Conditioning"],
-    images: ["/western-lodge.png"],
+    amenities: ["3 Bedrooms", "Multiple Bathrooms", "Multiple ACs", "Ceiling Fans", "Dining Table", "Fridge", "Mineral Water Dispenser", "Satellite TV", "Kettle", "Baby Crib", "Complimentary Toiletries"],
+    images: ["/room5.png"],
   },
 ];
 
@@ -139,12 +139,12 @@ export const ATTRACTIONS = [
 ] as const;
 
 export const GALLERY: GalleryItem[] = [
-  { id: "1", url: "/western-lodge.png", alt: "Western Highway Lodge — coastal panorama",       category: "EXTERIOR",     order: 1 },
-  { id: "2", url: "/western-lodge.png", alt: "The lodge facade at golden hour",                category: "EXTERIOR",     order: 2 },
-  { id: "3", url: "/western-lodge.png", alt: "Limestone karst formations from the lodge",      category: "SURROUNDINGS", order: 3 },
-  { id: "4", url: "/western-lodge.png", alt: "Tropical garden grounds",                        category: "EXTERIOR",     order: 4 },
-  { id: "5", url: "/western-lodge.png", alt: "Marabut bay view at dawn",                       category: "SURROUNDINGS", order: 5 },
-  { id: "6", url: "/western-lodge.png", alt: "The lodge overlooking the Leyte Gulf",           category: "EXTERIOR",     order: 6 },
+  { id: "1", url: "/food.jpeg", alt: "Western Highway Lodge — coastal panorama",       category: "EXTERIOR",     order: 1 },
+  { id: "2", url: "/frontDoor.jpeg", alt: "The lodge facade at golden hour",                category: "EXTERIOR",     order: 2 },
+  { id: "3", url: "/restaurant.jpeg", alt: "Limestone karst formations from the lodge",      category: "SURROUNDINGS", order: 3 },
+  { id: "4", url: "/sign.jpeg", alt: "Tropical garden grounds",                        category: "EXTERIOR",     order: 4 },
+  { id: "5", url: "/conference.png", alt: "Marabut bay view at dawn",                       category: "SURROUNDINGS", order: 5 },
+  { id: "6", url: "/terrace.png", alt: "The lodge overlooking the Leyte Gulf",           category: "EXTERIOR",     order: 6 },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
