@@ -64,6 +64,7 @@ export function Navbar() {
         </ul>
 
         {/* Book Now pill + hamburger */}
+        {/* Book Now pill + hamburger */}
         <div className="flex items-center gap-3">
           <button
             onClick={openModal}
