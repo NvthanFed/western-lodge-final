@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { RoomsSection } from "@/components/sections/RoomsSection";
 import { AmenitiesSection } from "@/components/sections/AmenitiesSection";
+import { VenuesSection } from "@/components/sections/VenuesSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { GALLERY } from "@/data/content";
@@ -19,6 +20,7 @@ export default function HomePage() {
         <AboutSection />
         <RoomsSection />
         <AmenitiesSection />
+        <VenuesSection />
         <GallerySection items={GALLERY} />
         <ContactSection />
       </main>

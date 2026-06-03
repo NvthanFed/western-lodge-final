@@ -9,8 +9,9 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const ROOM_TYPE_LABELS: Record<string, string> = {
-  SINGLE:         "Delux Single Room",
-  DOUBLE_BUNK:    "Double Bunks Single Room",
+  SINGLE:          "Delux Single Room",
+  EN_SUITE_SINGLE: "En Suite Single Room",
+  DOUBLE_BUNK:     "Double Bunks Single Room",
   STUDIO:         "Super Delux Studio",
   STUDIO_BALCONY: "Super Delux Studio with Balcony",
   TWIN:           "Superior Delux Twin Room",
@@ -29,6 +30,17 @@ export const ROOMS: Room[] = [
     capacity: 2,
     amenities: ["Air Conditioning", "Ceiling Fan", "Fridge", "Satellite TV", "En-Suite Shower", "Kettle", "Mineral Water", "Complimentary Toiletries"],
     images: ["/room1.jpeg"],
+  },
+  {
+    id: "suite-single",
+    name: "En Suite Single Room",
+    type: "EN_SUITE_SINGLE",
+    description:
+      "Full-size single bed with en-suite shower, air conditioning, fridge, satellite TV, kettle, and complimentary toiletries. Comfortable and value-packed for the solo traveller.",
+    price: "950",
+    capacity: 2,
+    amenities: ["Air Conditioning", "Fridge", "Satellite TV", "En-Suite Shower", "Kettle", "Complimentary Toiletries"],
+    images: ["/enSuiteSingleRoom.jpeg"],
   },
   {
     id: "double-bunk",

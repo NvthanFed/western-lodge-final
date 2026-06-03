@@ -11,22 +11,32 @@ import { useBookingModal } from "@/context/BookingModalContext";
 
 const FEATURED_ROOMS = [
   {
+    id: "suite-single",
+    name: "En Suite Single Room",
+    badge: { label: "Standard", className: "bg-tropical-500 text-white" },
+    price: "₱950",
+    description:
+      "Full-size single bed with en-suite shower, air conditioning, fridge, satellite TV, kettle, and complimentary toiletries. Comfortable and value-packed for the solo traveller.",
+    image: "/enSuiteSingleRoom.jpeg",
+  },
+  {
     id: "delux-single",
     name: "Delux Single Room",
     badge: { label: "Standard", className: "bg-tropical-500 text-white" },
     price: "₱950",
     description:
       "Full-size single bed with en-suite shower, air conditioning, fridge, satellite TV, kettle, and complimentary toiletries. Comfortable and value-packed for the solo traveller.",
-    image: "/room1.jpeg",
+    image: "/room2.png",
   },
+  
   {
     id: "studio-balcony",
-    name: "Super Delux Studio with Balcony",
+    name: "Delux Double Studio",
     badge: { label: "Delux", className: "bg-teal-500 text-white" },
     price: "₱1,400",
     description:
       "Queen bed and sofa set with a private balcony. En-suite hot/cold shower, AC, ceiling fan, fridge, and satellite TV. Perfect for couples. Extra person +₱600/night.",
-    image: "/room2.png",
+    image: "/room1.jpeg",
   },
   {
     id: "family-studio",
@@ -35,7 +45,7 @@ const FEATURED_ROOMS = [
     price: "from ₱2,000",
     description:
       "Double bed, single bed, plus an adjoining bunk room — sleeps up to 5. En-suite hot/cold shower, fridge, satellite TV, vanity unit, and storage. 3 Pax ₱2,000 · 4 Pax ₱2,600 · 5 Pax ₱3,250.",
-    image: "/room3.png",
+    image: "/room5.png",
   },
   {
     id: "super-studio",
@@ -53,7 +63,7 @@ const FEATURED_ROOMS = [
     price: "from ₱3,250",
     description:
       "Three-bedroom apartment for up to 8 guests. Queen, single, and baby crib in Bedroom 1 · twin bunks in Bedroom 2 · three singles in Bedroom 3. Dining table, fridge, mineral water dispenser, and satellite TV throughout. 5 Pax ₱3,250 · 6 Pax ₱3,900 · 8 Pax ₱5,200.",
-    image: "/room5.png",
+    image: "/room3.png",
   },
 ] as const;
 

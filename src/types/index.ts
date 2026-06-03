@@ -7,6 +7,7 @@ export interface Room {
   name: string;
   type:
     | "SINGLE"
+    | "EN_SUITE_SINGLE"
     | "DOUBLE_BUNK"
     | "STUDIO"
     | "STUDIO_BALCONY"
@@ -53,6 +54,7 @@ export const BookingInquirySchema = z.object({
   checkOut: z.string().min(1, "Check-out date is required"),
   roomType: z.enum([
     "SINGLE",
+    "EN_SUITE_SINGLE",
     "DOUBLE_BUNK",
     "STUDIO",
     "STUDIO_BALCONY",
