@@ -151,12 +151,16 @@ export const ATTRACTIONS = [
 ] as const;
 
 export const GALLERY: GalleryItem[] = [
-  { id: "1", url: "/food.jpeg", alt: "Western Highway Lodge — coastal panorama",       category: "EXTERIOR",     order: 1 },
-  { id: "2", url: "/frontDoor.jpeg", alt: "The lodge facade at golden hour",                category: "EXTERIOR",     order: 2 },
-  { id: "3", url: "/restaurant.jpeg", alt: "Limestone karst formations from the lodge",      category: "SURROUNDINGS", order: 3 },
-  { id: "4", url: "/sign.jpeg", alt: "Tropical garden grounds",                        category: "EXTERIOR",     order: 4 },
-  { id: "5", url: "/conference.png", alt: "Marabut bay view at dawn",                       category: "SURROUNDINGS", order: 5 },
-  { id: "6", url: "/terrace.png", alt: "The lodge overlooking the Leyte Gulf",           category: "EXTERIOR",     order: 6 },
+  { id: "1",  url: "/food.jpeg",              alt: "Fresh home-cooked cuisine at Western Highway Lodge",    category: "DINING",       order: 1  },
+  { id: "2",  url: "/frontDoor.jpeg",         alt: "The lodge entrance at golden hour",                    category: "EXTERIOR",     order: 2  },
+  { id: "3",  url: "/restaurant.jpeg",        alt: "Western Highway Lodge dining room",                    category: "DINING",       order: 3  },
+  { id: "4",  url: "/restaurant2.jpeg",              alt: "Western Highway Lodge — Marabut, Samar",               category: "EXTERIOR",     order: 4  },
+  { id: "5",  url: "/conference.png",         alt: "Fully equipped conference and function hall",          category: "AMENITIES",    order: 5  },
+  { id: "6",  url: "/terrace.png",            alt: "Lodge outdoor terrace overlooking the coast",          category: "EXTERIOR",     order: 6  },
+  { id: "7",  url: "/sign.jpeg",             alt: "Delux Double Studio room interior",                    category: "ROOMS",        order: 7  },
+  { id: "8",  url: "/frontHotel.jpg", alt: "En Suite Single Room — compact and comfortable",       category: "ROOMS",        order: 8  },
+  { id: "9",  url: "/hall1.jpeg",             alt: "Conference hall — main seating area",                  category: "AMENITIES",    order: 9  },
+  { id: "10", url: "/hall3.jpeg",             alt: "Conference hall — event setup",                        category: "AMENITIES",    order: 10 },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

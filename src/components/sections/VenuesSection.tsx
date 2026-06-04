@@ -154,26 +154,15 @@ export function VenuesSection() {
             viewport={{ once: true, margin: "-80px" }}
             className="gpu-accelerated order-1 lg:order-2"
           >
-            {/* Wide primary + narrower secondary */}
-            <div className="grid grid-cols-5 gap-2 h-[280px] sm:h-[380px] lg:h-[460px]">
-              <div className="col-span-3 relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/rooftop1.jpeg"
-                  alt="Rooftop bar — panoramic view"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 60vw, 28vw"
-                />
-              </div>
-              <div className="col-span-2 relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/rooftop2.jpeg"
-                  alt="Rooftop bar — terrace at sunset"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 40vw, 18vw"
-                />
-              </div>
+            <div className="relative h-[280px] sm:h-[380px] lg:h-[460px] rounded-2xl overflow-hidden">
+              <Image
+                src="/rooftop3.png"
+                alt="Western Highway Lodge — outdoor terrace"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
             </div>
           </motion.div>
         </div>

@@ -21,7 +21,7 @@ export function AboutSection() {
           >
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-luxury">
               <Image
-                src="/western-lodge.png"
+                src="/western-lodge2.png"
                 alt="Western Highway Lodge at night — Marabut, Samar"
                 fill
                 className="object-cover"
@@ -37,8 +37,6 @@ export function AboutSection() {
               <p className="font-body text-[0.6rem] tracking-[0.2em] uppercase text-teal-100/75 mt-1.5">Marabut, Samar</p>
             </div>
 
-            {/* Decorative accent circle */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full border-2 border-sand-300/70 -z-10" />
           </motion.div>
 
           {/* Right — text column */}
