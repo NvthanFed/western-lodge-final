@@ -20,16 +20,6 @@ const FEATURED_ROOMS = [
     image: "/enSuiteSingleRoom.jpeg",
   },
   {
-    id: "delux-single",
-    name: "Delux Single Room",
-    badge: { label: "Standard", className: "bg-tropical-500 text-white" },
-    price: "₱950",
-    description:
-      "Full-size single bed with en-suite shower, air conditioning, fridge, satellite TV, kettle, and complimentary toiletries. Comfortable and value-packed for the solo traveller.",
-    image: "/room2.png",
-  },
-  
-  {
     id: "studio-balcony",
     name: "Delux Double Studio",
     badge: { label: "Delux", className: "bg-teal-500 text-white" },
@@ -39,13 +29,13 @@ const FEATURED_ROOMS = [
     image: "/room1.jpeg",
   },
   {
-    id: "family-studio",
-    name: "Superior Delux Family Studio",
-    badge: { label: "Family", className: "bg-teal-500 text-white" },
-    price: "from ₱2,000",
+    id: "twin-room",
+    name: "Superior Delux Twin Room",
+    badge: { label: "Delux", className: "bg-tropical-500 text-white" },
+    price: "₱1500",
     description:
-      "Double bed, single bed, plus an adjoining bunk room — sleeps up to 5. En-suite hot/cold shower, fridge, satellite TV, vanity unit, and storage. 3 Pax ₱2,000 · 4 Pax ₱2,600 · 5 Pax ₱3,250.",
-    image: "/room5.png",
+      "Two full size single beds, AC + ceiling fan, fridge, bathroom en-Suite, Hot-Cold shower, satellite TV, mineral water, complimentary toiletries.",
+    image: "/room2.png",
   },
   {
     id: "super-studio",
@@ -56,6 +46,16 @@ const FEATURED_ROOMS = [
       "Queen size bed plus a full-size single bed with en-suite hot/cold shower, AC, fridge, and satellite TV. Sleeps up to 3. 1–2 Pax ₱1,500 · 3 Pax ₱1,950. Extra person +₱600/night.",
     image: "/room4.png",
   },
+  {
+    id: "family-studio",
+    name: "Superior Delux Family Studio",
+    badge: { label: "Family", className: "bg-teal-500 text-white" },
+    price: "from ₱2,000",
+    description:
+      "Double bed, single bed, plus an adjoining bunk room — sleeps up to 5. En-suite hot/cold shower, fridge, satellite TV, vanity unit, and storage. 3 Pax ₱2,000 · 4 Pax ₱2,600 · 5 Pax ₱3,250.",
+    image: "/room5.png",
+  },
+  
   {
     id: "superior-suite",
     name: "Superior Delux Suite",
