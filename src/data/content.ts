@@ -156,7 +156,7 @@ export const GALLERY: GalleryItem[] = [
   { id: "3",  url: "/restaurant.jpeg",        alt: "Western Highway Lodge dining room",                    category: "DINING",       order: 3  },
   { id: "4",  url: "/restaurant2.jpeg",              alt: "Western Highway Lodge — Marabut, Samar",               category: "EXTERIOR",     order: 4  },
   { id: "5",  url: "/conference.png",         alt: "Fully equipped conference and function hall",          category: "AMENITIES",    order: 5  },
-  { id: "6",  url: "/terrace.png",            alt: "Lodge outdoor terrace overlooking the coast",          category: "EXTERIOR",     order: 6  },
+  { id: "6",  url: "/terrace.jpg",            alt: "Lodge outdoor terrace overlooking the coast",          category: "EXTERIOR",     order: 6  },
   { id: "7",  url: "/sign.jpeg",             alt: "Delux Double Studio room interior",                    category: "ROOMS",        order: 7  },
   { id: "8",  url: "/frontHotel.jpg", alt: "En Suite Single Room — compact and comfortable",       category: "ROOMS",        order: 8  },
   { id: "9",  url: "/hall1.jpeg",             alt: "Conference hall — main seating area",                  category: "AMENITIES",    order: 9  },
