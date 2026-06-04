@@ -28,7 +28,7 @@ const FEATURED_ROOMS = [
     name: "En Suite Single Room",
     badge: { label: "Standard", className: "bg-tropical-500 text-white" },
     price: "₱950",
-    capacity: 2,
+    capacity: 1,
     description:
       "Full-size single bed with en-suite shower, air conditioning, fridge, satellite TV, kettle, and complimentary toiletries. Comfortable and value-packed for the solo traveller.",
     images: ["/En Suite Single Room/enSuiteSingleRoom.jpeg"],
