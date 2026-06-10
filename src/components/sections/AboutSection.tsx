@@ -65,7 +65,7 @@ export function AboutSection() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-sand-300">
               {[
-                { value: "12+",   label: "Years of Service" },
+                { value: "13+",   label: "Years of Service" },
                 { value: "12",   label: "Room Types" },
                 { value: "4.9★", label: "Guest Rating" },
               ].map(({ value, label }) => (
