@@ -33,7 +33,7 @@ export function AboutSection() {
             {/* Teal Est. badge — overlaps bottom-right corner */}
             <div className="absolute -bottom-5 -right-5 bg-teal-500 rounded-2xl px-6 py-5 shadow-luxury">
               <p className="font-body font-600 text-[0.6rem] tracking-[0.22em] uppercase text-teal-100/75 mb-1">Est.</p>
-              <p className="font-heading font-800 text-white text-4xl leading-none">2018</p>
+              <p className="font-heading font-800 text-white text-4xl leading-none">2012</p>
               <p className="font-body text-[0.6rem] tracking-[0.2em] uppercase text-teal-100/75 mt-1.5">Marabut, Samar</p>
             </div>
 

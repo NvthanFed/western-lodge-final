@@ -47,7 +47,7 @@ export function VenuesSection() {
           <SectionHeading
             eyebrow="Signature Spaces"
             title="Beyond the Room"
-            subtitle="Two distinctive spaces crafted for every occasion — from focused meetings to golden-hour cocktails above the bay."
+            subtitle="Distinctive spaces and experiences crafted for every occasion — from focused meetings and golden-hour cocktails to the wonders waiting just beyond our doors."
             centered
           />
         </FadeInUp>
@@ -125,7 +125,7 @@ export function VenuesSection() {
         </div>
 
         {/* Rooftop Bar — text left, collage right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20 lg:mb-28">
 
           <motion.div
             variants={fadeInLeft}
@@ -154,16 +154,91 @@ export function VenuesSection() {
             viewport={{ once: true, margin: "-80px" }}
             className="gpu-accelerated order-1 lg:order-2"
           >
+            <div className="grid grid-cols-2 grid-rows-2 gap-2 h-[280px] sm:h-[380px] lg:h-[460px]">
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/rooftop3.png"
+                  alt="Western Highway Lodge — rooftop terrace"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/rooftop4.png"
+                  alt="Western Highway Lodge — rooftop bar at golden hour"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/rooftop5.png"
+                  alt="Western Highway Lodge — rooftop terrace seating"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/rooftop6.png"
+                  alt="Western Highway Lodge — rooftop terrace views"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Local Attractions — collage left, text right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <motion.div
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="gpu-accelerated"
+          >
             <div className="relative h-[280px] sm:h-[380px] lg:h-[460px] rounded-2xl overflow-hidden">
               <Image
-                src="/rooftop3.png"
-                alt="Western Highway Lodge — outdoor terrace"
+                src="/attractions.png"
+                alt="Western Highway Lodge — nearby local attractions"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
             </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="gpu-accelerated"
+          >
+            <VenueDetails
+              eyebrow="Explore the Area"
+              title="Local Attractions"
+              description="Step beyond the lodge and discover the natural beauty of Marabut. From dramatic limestone rock formations rising out of the sea to pristine beaches and hidden coves, unforgettable adventures are just a short journey away."
+              features={[
+                "Marabut Rock Formations",
+                "Pristine beaches & coves",
+                "Island-hopping excursions",
+                "Scenic coastal viewpoints",
+              ]}
+            />
           </motion.div>
         </div>
 

@@ -15,13 +15,13 @@ import { RoomGalleryModal } from "@/components/ui/RoomGalleryModal";
 const FEATURED_ROOMS = [ 
   {
     id: "double-bunk",
-    name: "Double Bunks Single Room",
+    name: "Traveler's Bunk Room",
     badge: { label: "Bunk", className: "bg-tropical-600 text-white" },
     price: "₱900",
     capacity: 2,
     description:
       "Single-size bunk beds (up and down) with shared bathroom. Air conditioning, ceiling fan, kettle, mineral water, and complimentary toiletries. Single occupant ₱500/night.",
-    images: ["/western-lodge.png"],
+    images: ["/travelerBunk.png"],
   },
   {
     id: "suite-single",
@@ -31,7 +31,7 @@ const FEATURED_ROOMS = [
     capacity: 1,
     description:
       "Full-size single bed with en-suite shower, air conditioning, fridge, satellite TV, kettle, and complimentary toiletries. Comfortable and value-packed for the solo traveller.",
-    images: ["/En Suite Single Room/enSuiteSingleRoom.jpeg"],
+    images: ["/En Suite Single Room/enSuiteSingleRoom.png"],
   },
   {
     id: "studio-balcony",
@@ -58,9 +58,7 @@ const FEATURED_ROOMS = [
     description:
       "Two full size single beds, AC + ceiling fan, fridge, bathroom en-suite hot-cold shower, satellite TV, mineral water, complimentary toiletries. Extra person +₱600/night.",
     images: [
-      "/Superior Delux Twin Room/superiorTwin1.png",
-      "/Superior Delux Twin Room/superiorTwin2.jpg",
-      "/Superior Delux Twin Room/superiorTwin3.jpg",
+      "/twinRoomG14.png",
     ],
   },
   {
@@ -105,7 +103,10 @@ const FEATURED_ROOMS = [
       "/Surperior Delux Suite/superiorSuite1.png",
       "/Surperior Delux Suite/superiorSuite2.jpg",
       "/Surperior Delux Suite/superiorSuite3.jpg",
+      "/F32.png",
       "/Surperior Delux Suite/superiorSuite4.jpg",
+      "/F31.png",
+      "/F33.png",
     ],
   },
 ] as const;
