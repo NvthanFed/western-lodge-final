@@ -70,22 +70,13 @@ export function Footer() {
             </h4>
             <div className="flex items-center gap-3 mb-6">
               <a
-                href="#"
+                href="https://www.google.com/search?q=western+lodge+samar+facebook&rlz=1C1ONGR_enUS1033US1033&oq=western+lodge+samar+facebook&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRiPAtIBCDkwOTBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="w-9 h-9 bg-white/8 hover:bg-teal-500 rounded-lg flex items-center justify-center transition-colors duration-300"
               >
                 <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-9 h-9 bg-white/8 hover:bg-teal-500 rounded-lg flex items-center justify-center transition-colors duration-300"
-              >
-                <InstagramIcon className="w-4 h-4" />
               </a>
             </div>
             <p className="font-body text-xs text-white/30 leading-relaxed">
