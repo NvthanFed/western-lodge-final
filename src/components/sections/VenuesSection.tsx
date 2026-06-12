@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Search } from "lucide-react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeInUp } from "@/components/ui/FadeInUp";
 import { fadeInLeft, fadeInRight } from "@/lib/animations";
@@ -37,7 +40,66 @@ function VenueDetails({ eyebrow, title, description, features }: VenueDetailsPro
   );
 }
 
+interface CollageImageProps {
+  src: string;
+  alt: string;
+  sizes: string;
+  className?: string;
+  onClick: () => void;
+}
+
+function CollageImage({ src, alt, sizes, className = "", onClick }: CollageImageProps) {
+  return (
+    <div
+      className={`relative rounded-2xl overflow-hidden cursor-pointer group ${className}`}
+      onClick={onClick}
+    >
+      <Image src={src} alt={alt} fill className="object-cover" sizes={sizes} />
+      <div className="absolute inset-0 bg-teal-900/35 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
+        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+          <Search className="w-5 h-5 text-white" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const ATTRACTIONS = [
+  { src: "/attraction1.png", alt: "Marabut — limestone rock formation" },
+  { src: "/attraction2.png", alt: "Marabut — seaside grotto" },
+  { src: "/attraction3.png", alt: "Marabut — shrine statue" },
+  { src: "/attraction4.png", alt: "Marabut — coastal rock arch" },
+  { src: "/attraction5.png", alt: "Marabut — beachside cave" },
+  { src: "/attraction6.png", alt: "Marabut — island in the bay" },
+  { src: "/attraction7.png", alt: "Marabut — beach with outrigger boat" },
+  { src: "/attraction8.png", alt: "Marabut — historic church" },
+  { src: "/attraction9.png", alt: "Marabut — church interior" },
+];
+
+const VENUE_IMAGES = [
+  { src: "/hall1.jpeg", alt: "Conference hall — main view" },
+  { src: "/hall2.jpeg", alt: "Conference hall — seating" },
+  { src: "/hall3.jpeg", alt: "Conference hall — interior" },
+  { src: "/hall4.jpeg", alt: "Conference hall — setup" },
+  { src: "/rooftop4.png", alt: "Western Highway Lodge — rooftop bar at golden hour" },
+  { src: "/rooftop5.png", alt: "Western Highway Lodge — rooftop terrace seating" },
+  { src: "/rooftop6.png", alt: "Western Highway Lodge — rooftop terrace views" },
+  ...ATTRACTIONS,
+];
+
+const ATTRACTIONS_OFFSET = 7;
+
 export function VenuesSection() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const slides = VENUE_IMAGES.map((img) => ({ src: img.src, alt: img.alt }));
+
   return (
     <section id="venues" className="bg-white section-y">
       <div className="max-w-7xl mx-auto section-x">
@@ -64,42 +126,31 @@ export function VenuesSection() {
           >
             {/* 1 large photo left + 3 smaller right column */}
             <div className="grid grid-cols-3 grid-rows-3 gap-2 h-[280px] sm:h-[380px] lg:h-[460px]">
-              <div className="col-span-2 row-span-3 relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/hall1.jpeg"
-                  alt="Conference hall — main view"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 60vw, 28vw"
-                />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/hall2.jpeg"
-                  alt="Conference hall — seating"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 30vw, 14vw"
-                />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/hall3.jpeg"
-                  alt="Conference hall — interior"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 30vw, 14vw"
-                />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/hall4.jpeg"
-                  alt="Conference hall — setup"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 30vw, 14vw"
-                />
-              </div>
+              <CollageImage
+                src="/hall1.jpeg"
+                alt="Conference hall — main view"
+                sizes="(max-width: 1024px) 60vw, 28vw"
+                className="col-span-2 row-span-3"
+                onClick={() => openLightbox(0)}
+              />
+              <CollageImage
+                src="/hall2.jpeg"
+                alt="Conference hall — seating"
+                sizes="(max-width: 1024px) 30vw, 14vw"
+                onClick={() => openLightbox(1)}
+              />
+              <CollageImage
+                src="/hall3.jpeg"
+                alt="Conference hall — interior"
+                sizes="(max-width: 1024px) 30vw, 14vw"
+                onClick={() => openLightbox(2)}
+              />
+              <CollageImage
+                src="/hall4.jpeg"
+                alt="Conference hall — setup"
+                sizes="(max-width: 1024px) 30vw, 14vw"
+                onClick={() => openLightbox(3)}
+              />
             </div>
           </motion.div>
 
@@ -154,52 +205,30 @@ export function VenuesSection() {
             viewport={{ once: true, margin: "-80px" }}
             className="gpu-accelerated order-1 lg:order-2"
           >
-            <div className="grid grid-cols-2 grid-rows-2 gap-2 h-[280px] sm:h-[380px] lg:h-[460px]">
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/rooftop3.png"
-                  alt="Western Highway Lodge — rooftop terrace"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/rooftop4.png"
-                  alt="Western Highway Lodge — rooftop bar at golden hour"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/rooftop5.png"
-                  alt="Western Highway Lodge — rooftop terrace seating"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/rooftop6.png"
-                  alt="Western Highway Lodge — rooftop terrace views"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
-              </div>
+            <div className="grid grid-cols-3 gap-2 h-[280px] sm:h-[380px] lg:h-[460px]">
+              <CollageImage
+                src="/rooftop4.png"
+                alt="Western Highway Lodge — rooftop bar at golden hour"
+                sizes="(max-width: 1024px) 33vw, 17vw"
+                onClick={() => openLightbox(4)}
+              />
+              <CollageImage
+                src="/rooftop5.png"
+                alt="Western Highway Lodge — rooftop terrace seating"
+                sizes="(max-width: 1024px) 33vw, 17vw"
+                onClick={() => openLightbox(5)}
+              />
+              <CollageImage
+                src="/rooftop6.png"
+                alt="Western Highway Lodge — rooftop terrace views"
+                sizes="(max-width: 1024px) 33vw, 17vw"
+                onClick={() => openLightbox(6)}
+              />
             </div>
           </motion.div>
         </div>
 
-        {/* Local Attractions — collage left, text right */}
+        {/* Local Attractions — text left, individual photo grid right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           <motion.div
@@ -207,26 +236,7 @@ export function VenuesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
-            className="gpu-accelerated"
-          >
-            <div className="relative h-[280px] sm:h-[380px] lg:h-[460px] rounded-2xl overflow-hidden">
-              <Image
-                src="/attractions.png"
-                alt="Western Highway Lodge — nearby local attractions"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-teal-900/30 to-transparent" />
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={fadeInRight}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            className="gpu-accelerated"
+            className="gpu-accelerated order-2 lg:order-1"
           >
             <VenueDetails
               eyebrow="Explore the Area"
@@ -240,9 +250,38 @@ export function VenuesSection() {
               ]}
             />
           </motion.div>
+
+          <motion.div
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="gpu-accelerated order-1 lg:order-2"
+          >
+            <div className="grid grid-cols-3 gap-2">
+              {ATTRACTIONS.map((img, i) => (
+                <CollageImage
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  sizes="(max-width: 1024px) 33vw, 17vw"
+                  className="aspect-[4/3]"
+                  onClick={() => openLightbox(ATTRACTIONS_OFFSET + i)}
+                />
+              ))}
+            </div>
+          </motion.div>
         </div>
 
       </div>
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        index={lightboxIndex}
+        slides={slides}
+        styles={{ container: { backgroundColor: "rgba(4,24,40,0.95)" } }}
+      />
     </section>
   );
 }
